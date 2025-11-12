@@ -27,10 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Show project files
-      run: ls -la
     - run: npm ci
     - name: Show package.json content
-      run: cat package.json
     - run: npm run build --if-present
     - run: npm test
